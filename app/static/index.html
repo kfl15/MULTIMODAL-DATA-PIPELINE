@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modality · Local preprocessing</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/"
+        ><span class="mark">m.</span> modality<span class="brand-note"
+          >/ local workspace</span
+        ></a
+      ><span class="local-badge"><i></i> Local processing</span>
+    </header>
+    <main>
+      <div class="intro">
+        <div>
+          <p class="eyebrow">MULTIMODAL → TEXT</p>
+          <h1>Different formats.<br />One readable workspace.</h1>
+          <p class="subtitle">
+            Turn audio, documents, images, and video into text.<br />Keep every
+            source in its own file, ready for your next RAG project.
+          </p>
+        </div>
+        <div class="intro-note">
+          <span class="step-number">01 / 02 / 03</span>
+          <p>
+            Add your sources.<br />Choose what to process.<br />Take your text
+            with you.
+          </p>
+          <a href="/docs" target="_blank" rel="noopener">Explore the API ↗</a>
+        </div>
+      </div>
+      <div id="notice" class="notice" role="status" hidden></div>
+      <div class="workspace-bar">
+        <h2>Your workspace</h2>
+        <button id="check" class="link-button">Check models & tools ↗</button>
+      </div>
+      <pre id="readiness" class="readiness" hidden></pre>
+      <div class="panels">
+        <section class="panel" aria-labelledby="input-title">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">01 · SOURCES</span>
+              <h2 id="input-title">Input</h2>
+            </div>
+            <span id="input-count" class="pill">0 files</span>
+          </div>
+          <p class="hint">
+            Upload a folder or add files to your local
+            <code>input/</code> folders.
+          </p>
+          <div id="categories" class="categories"></div>
+          <div class="upload-box">
+            <label for="upload-category">Upload to</label
+            ><select id="upload-category" aria-label="Upload category"></select
+            ><label class="button secondary" for="folder-picker"
+              >Choose folder</label
+            ><input
+              id="folder-picker"
+              type="file"
+              webkitdirectory
+              multiple
+              hidden
+            /><label class="small-link" for="file-picker">or choose files</label
+            ><input id="file-picker" type="file" multiple hidden />
+          </div>
+          <div class="list-heading">
+            <span>Source files</span
+            ><button id="refresh" class="link-button">Refresh</button>
+          </div>
+          <div id="inputs" class="file-list">
+            <p class="empty">No sources yet.</p>
+          </div>
+          <button id="start" class="button primary">
+            Process selected folders <span>→</span>
+          </button>
+          <p class="footnote">
+            English · one job at a time · originals stay unchanged
+          </p>
+        </section>
+        <section class="panel" aria-labelledby="output-title">
+          <div class="panel-head">
+            <div>
+              <span class="eyebrow">02 · EXTRACTED TEXT</span>
+              <h2 id="output-title">Output</h2>
+            </div>
+            <span id="output-count" class="pill">0 files</span>
+          </div>
+          <p class="hint">
+            One text file per source. Page, sheet, and time references stay with
+            the content.
+          </p>
+          <div id="job" class="job">
+            <div class="job-top">
+              <span id="job-status">Ready when you are</span
+              ><span id="job-count"></span>
+            </div>
+            <progress
+              id="progress"
+              value="0"
+              max="1"
+              aria-label="Processing progress"
+            ></progress>
+            <p id="stage">Your progress will appear here.</p>
+            <p id="current-file" class="muted"></p>
+            <a id="zip" class="small-link" hidden>Download this job as ZIP ↓</a>
+          </div>
+          <div class="list-heading">
+            <span>Text files</span
+            ><span class="muted">Preview or download</span>
+          </div>
+          <div id="outputs" class="file-list">
+            <p class="empty">Your text files will appear here.</p>
+          </div>
+          <details id="report">
+            <summary>Processing details & device verification</summary>
+            <div id="report-content"></div>
+          </details>
+        </section>
+      </div>
+      <section class="preview panel" id="preview-panel" hidden>
+        <div class="panel-head">
+          <h2 id="preview-name">Text preview</h2>
+          <button id="close-preview" class="link-button">Close ×</button>
+        </div>
+        <pre id="preview-text"></pre>
+      </section>
+      <footer>
+        <span>Built for understanding, before retrieval.</span
+        ><span>OCR text and model descriptions are labeled separately.</span>
+      </footer>
+    </main>
+  </body>
+</html>

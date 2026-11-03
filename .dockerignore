@@ -1,0 +1,10 @@
+input
+output
+models
+runtime
+reference_data
+.venv*
+.git
+.env
+**/__pycache__
+**/.ipynb_checkpoints

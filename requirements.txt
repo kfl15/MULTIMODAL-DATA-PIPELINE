@@ -1,0 +1,26 @@
+# Shared application and inference dependencies; framework builds are separate.
+fastapi==0.162.0
+uvicorn==0.54.0
+python-multipart==0.0.32
+openpyxl==3.1.5
+pydantic==2.12.5
+httpx==0.28.1
+requests==2.34.2
+numpy==2.2.6
+pillow==12.3.0
+PyMuPDF==1.26.7
+faster-whisper==1.2.1
+ctranslate2==4.8.3
+onnxruntime==1.23.2
+paddleocr==3.7.0
+paddlex==3.7.2
+transformers==4.57.6
+tokenizers==0.22.2
+huggingface-hub==0.36.0
+sympy==1.13.1
+filelock>=3.13
+networkx>=3.0
+jinja2>=3.1
+fsspec>=2024.6
+notebook==7.6.3
+ipykernel==7.3.0

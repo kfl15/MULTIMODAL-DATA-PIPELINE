@@ -1,0 +1,21 @@
+# Keep directory placeholders; never publish local datasets, weights or results.
+input/**
+!input/**/
+!input/**/.gitkeep
+output/**
+!output/**/
+!output/**/.gitkeep
+models/**
+!models/.gitkeep
+runtime/**
+!runtime/.gitkeep
+reference_data/**
+!reference_data/.gitkeep
+.env
+.venv*/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+*.log
+.DS_Store

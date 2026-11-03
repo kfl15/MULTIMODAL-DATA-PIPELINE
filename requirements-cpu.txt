@@ -1,0 +1,2 @@
+# No CUDA runtime downloads for the CPU image.
+paddlepaddle==3.3.0

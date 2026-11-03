@@ -1,0 +1,74 @@
+{
+  "paddle/PP-OCRv5_mobile_det": {
+    "repo_id": "PaddlePaddle/PP-OCRv5_mobile_det",
+    "revision": "0d63e78e2b680928f6b1747d76a08db6e645efb7",
+    "patterns": [
+      "inference.*",
+      "config.json"
+    ],
+    "checksums": {
+      "config.json": "7ac1c33f377ba58561f4b89d3180b6add2b7c5c60a4edac90fa4e0ceccdc6665",
+      "inference.json": "05feef1acb00aa4cd7362b15f7f501fc4f99d7b1fa73c1c871e0c7b1504b0f5c",
+      "inference.pdiparams": "afa1820cb16c1fd0dad589d0f8b389139061c1ef6d68019685fd07be997dda5b",
+      "inference.yml": "98069072e1b6b37d727fd9d9f11725faa46d6ea0de012f2ed26caea011c37699"
+    }
+  },
+  "paddle/en_PP-OCRv5_mobile_rec": {
+    "repo_id": "PaddlePaddle/en_PP-OCRv5_mobile_rec",
+    "revision": "267c36e24c331595590fe7bd72bde2436fd286f2",
+    "patterns": [
+      "inference.*",
+      "config.json"
+    ],
+    "checksums": {
+      "config.json": "16103ac291a82fca50f0bb000d62a4b8168f6042f03c89c44cf32f241d1eb1f2",
+      "inference.json": "fd1b6ec722ea841a72d3ba43e527df1d1066d5d7808e0503ee3eec7265188753",
+      "inference.pdiparams": "3ec8a97ed6cefe8568d3e2ee90bb193299b566a7661aa4fd52d224b96b59f66b",
+      "inference.yml": "27e91d0582f40168aa218303c76e184bc78fa7a5d105aad0cfbad8458b441067"
+    }
+  },
+  "paddle/PP-DocLayout-S": {
+    "repo_id": "PaddlePaddle/PP-DocLayout-S",
+    "revision": "8ac289e66575bb9bba6e15c53719d8b15cc9b3b2",
+    "patterns": [
+      "inference.*",
+      "config.json"
+    ],
+    "checksums": {
+      "config.json": "45f5757daf01694c4adba0eba7ff2854caf011f02c91bdbd2ef6eb06d7a0f488",
+      "inference.json": "ac09e931895d4c442e5379ab3b7e9b583baf288e816ab7675ca519da9eb2a9d7",
+      "inference.pdiparams": "491c3382d84ca04d2033afbee0c105942ed82fea392bb4a19170646adebe088a",
+      "inference.yml": "6f690098c438214c67822239a568f0bc2bbe97a8f02fba93e492d4f2c47523c3"
+    }
+  },
+  "layoutreader": {
+    "repo_id": "hantian/layoutreader",
+    "revision": "629be376d86fbab624ddc4020804a4e93b5515bc",
+    "patterns": [
+      "config.json",
+      "model.safetensors",
+      "README.md"
+    ],
+    "checksums": {
+      "config.json": "b77e78d8333ee47d5c618eb08ca2070c22347cab5d753b1461e366cda9f42698",
+      "model.safetensors": "9df7c046b212c1892a649cbf98f2a521bbb32741e8cbc06f10ffd4247b53c451"
+    }
+  },
+  "whisper-tiny.en": {
+    "repo_id": "Systran/faster-whisper-tiny.en",
+    "revision": "0d3d19a32d3338f10357c0889762bd8d64bbdeba",
+    "patterns": [
+      "config.json",
+      "model.bin",
+      "tokenizer.json",
+      "vocabulary.txt",
+      "preprocessor_config.json"
+    ],
+    "checksums": {
+      "config.json": "14b1b421a90349bc551b881461426b561a874049cb9e4c4864f2ca384f6a7cc5",
+      "model.bin": "1a5afae06a4db91c975c9a9d78be5cc110ee4ea022ad57d55492e4550e936b2a",
+      "tokenizer.json": "929c5252409436dce1b38a75d1abbcb5e132d170d8e324e4e04ed915fa2d22df",
+      "vocabulary.txt": "ff77588746d3a2595d32ab5b69ffd7b95ce2441ac57533cb66fc3eb575a115cf"
+    }
+  }
+}

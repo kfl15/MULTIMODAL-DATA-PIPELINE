@@ -1,0 +1,26 @@
+name: multimodal-preprocessor
+services:
+  app:
+    image: multimodal-preprocessor:${RUNTIME:-cpu}
+    build:
+      context: .
+      network: host
+      args:
+        RUNTIME: ${RUNTIME:-cpu}
+    network_mode: host
+    environment:
+      DEVICE: ${DEVICE:-auto}
+      OLLAMA_URL: ${OLLAMA_URL:-http://127.0.0.1:11434}
+      VISION_MODEL: ${VISION_MODEL:-granite3.2-vision:2b}
+      VIDEO_FRAME_INTERVAL: ${VIDEO_FRAME_INTERVAL:-10}
+      MAX_UPLOAD_MB: ${MAX_UPLOAD_MB:-2048}
+    volumes:
+      - ./input:/workspace/input
+      - ./output:/workspace/output
+      - ./models:/workspace/models
+      - ./runtime:/workspace/runtime
+      - ./reference_data:/workspace/reference_data
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    restart: unless-stopped
+    init: true
+    shm_size: 1gb

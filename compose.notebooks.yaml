@@ -1,0 +1,8 @@
+# Use instead of the app while experimenting: shared GPU execution is sequential.
+services:
+  app:
+    command: ["jupyter", "notebook", "--ip=127.0.0.1", "--port=8888", "--no-browser", "--notebook-dir=/workspace/notebooks"]
+    volumes:
+      - ./notebooks:/workspace/notebooks
+    healthcheck:
+      disable: true
